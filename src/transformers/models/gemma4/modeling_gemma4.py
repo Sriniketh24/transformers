@@ -1472,6 +1472,7 @@ class Gemma4PreTrainedModel(PreTrainedModel):
     @torch.no_grad()
     def _init_weights(self, module):
         super()._init_weights(module)
+        super()._init_weights(module)
         if isinstance(module, Gemma4VisionPatchEmbedder):
             init.ones_(module.position_embedding_table)
         elif isinstance(module, Gemma4AudioRelPositionalEncoding):
